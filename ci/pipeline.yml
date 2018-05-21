@@ -12,10 +12,10 @@ jobs:
   plan:
   - get: moviefun
   - task: migrate-databases
-    file: pal-tracker/ci/migrate.yml
-  params:
-    CF_API_URL: {{cf-api-url}}
-    CF_USERNAME: {{cf-username}}
-    CF_PASSWORD: {{cf-password}}
-    CF_ORG: {{cf-org}}
-    CF_SPACE: {{cf-space}}
+    file: moviefun/ci/migrate.yml
+    params:
+      CF_API_URL: {{cf-api-url}}
+      CF_USERNAME: {{cf-username}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-org}}
+      CF_SPACE: {{cf-space}}
